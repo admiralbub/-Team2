@@ -45,4 +45,4 @@ for j in range(1,len(tr_elements)):
         i+=1
 Dict={title:column for (title,column) in col}
 df=pd.DataFrame(Dict)
-df.head()
+df
