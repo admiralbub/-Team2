@@ -14,11 +14,12 @@ points = soup.find_all('td', {"width":"110"})
 
 
 def csv_read(data):
-    with open("C:/Users/artem/Desktop/Parcing/driver.csv", 'a',encoding='utf-8') as file: #change to your file path drivers.csv
+    with open("C:/Users/artem/Desktop/Parcing/driver.csv",  "wt+", newline="",encoding='utf-8') as file: #change to your file path drivers.csv
         writer = csv.writer(file)
         writer.writerow((data['ID'], data['Name'], data['Country'], data['Championships'], data['Entries'], data['Points']))
 
 for i in range(0, len(name)):
+    
     data = {'ID': str(i+1),
             'Name': name[i].text,
             'Country':country[i].text,
